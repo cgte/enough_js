@@ -105,4 +105,21 @@ I never writ, nor no man ever loved.` ;
 let uniques = {};
 
 let sonnet_words = sonnet.match(/\w+/);
-_(sonnet_words)
+_(sonnet_words.length)
+
+_("Matching global")
+
+sonnet_words = sonnet.match(/\w+/g);
+_(sonnet_words.length)
+
+
+for (let i=0; i < sonnet_words.length; i ++ ) {
+  let current = sonnet_words[i];
+  if(! uniques[current]) {
+      uniques[current]  = 0;
+  }
+  uniques[current] += 1;
+}
+
+_(uniques);
+
