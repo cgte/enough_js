@@ -62,32 +62,25 @@ _(dayname(new Date()) );
 _(dayname());
 
 
+// .load palindrome.js
+let palindrome_lib =  require('./palindrome.js');
 
-_("Chainning")
+_(palindrome_lib.palindrome('radar'))
 
-let reverse1 = (string)=> {
-  let letters = string.split();
-  letters.reverse();
-  return letters.join('');
+_("RadAr" ,palindrome_lib.palindrome('RadAr'))
+
+
+let email_parts =  (email) =>{
+  let chunks = email.split("@")
+
+  return {'email': email, 'login': chunks[0], 'fqdn': chunks[1]};
 }
 
-let reverse2 = (string) => {
-  // using method chaining
-  return string.split().reverse().join('') ;
-}
-
-let palindrome = (string)=> {
-  return string === reverse1(string);
-}
-
-
-_(palindrome('radar'))
-
-
-
-
+_(email_parts('login@fqdn'))
 
 console.log("functions module loaded");
+
+
 
 
 
