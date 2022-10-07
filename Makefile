@@ -1,8 +1,9 @@
 run:
-	node hello.js
-	node stringops.js
-	node conditionals.js
-	node arrays.js
+	node other.js
+	#node hello.js
+	#node stringops.js
+	#node conditionals.js
+	#node arrays.js
 	#firefox chapter1/index.html
 	#firefox $(shell python remote_url.py)
 
