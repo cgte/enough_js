@@ -43,5 +43,22 @@ for (let i=-10; i <= 10;  i ++){
   if (!(slim == fat)) {_(`test failed for ${slim} ${fat}`)}
   if (!slim == fat) {_(`test failed for ${slim} ${fat}`)}
   if (slim != fat) {_(`test failed for ${slim} ${fat}`)}
+
 }
 
+
+
+const DoW = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+let dayname = (date) => {
+  if (!date){date =  new Date()}
+  let  idx =  date.getDay();
+
+    return DoW[idx];
+}
+
+_(dayname(new Date()) );
+
+_(dayname());
+
+console.log("functions module loaded");
