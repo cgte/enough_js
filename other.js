@@ -120,6 +120,17 @@ for (let i=0; i < sonnet_words.length; i ++ ) {
   }
   uniques[current] += 1;
 }
+ // _(uniques)
 
-_(uniques);
+// _(uniques); very long
 
+
+let sonmap = new Map();
+
+for (let i=0; i < sonnet_words.length; i ++ ) {
+  let current = sonnet_words[i].toLowerCase();
+  if (! sonmap.get(current)){sonmap.set(current, 0);}
+  sonmap.set(current, sonmap.get(current) + 1);
+}
+
+// _(sonmap);
