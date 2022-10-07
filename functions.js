@@ -78,10 +78,13 @@ let email_parts =  (email) =>{
 
 _(email_parts('login@fqdn'))
 
+square_list = (alist) => {
+ return alist.forEach((x) => {_(x); return x**2})
+}
+
+_(square_list([1,2,3,4]))
+
 console.log("functions module loaded");
-
-
-
 
 
 
